@@ -1,8 +1,41 @@
 describe('emag.ro', () => {
-it('remember me', async () => {
+
+
+  it('remember me', async () => {
         const searchBox = await $('#remember_me');  
-        const searchButton = await $('.form-check');  // testing the remember me button
-    
- }); 
- 
-});
+        const searchButton = await $('.form-check');  
+   });   // testing the remember me button
+   
+   
+   it('should have the correct page title', async () => {
+      await browser.url('https://www.emag.ro');
+      await expect(browser).toHaveTitle('eMAG.ro - Libertate în fiecare zi');  
+  });   // test the site title
+
+
+  it('should contain a cart button', async () => {
+    const cartButton = await $('#my_cart');
+    await expect(cartButton).toBeDisplayed();
+  });   // test the shopping cart button
+
+
+  it('should open eMag genius page', async () => {
+    const geniusButton = await $('[title="eMAG Genius"]');
+    await geniusButton.click();
+    await expect(browser).toHaveTitle('eMAG genius: serviciul tău premium de cumpărături - eMAG.ro');
+  });   // test the emag genius button and the emag genius page
+
+
+  it('', async () => {
+    const searchBox = await $('#searchboxTrigger');  // testeaza casuta de cautare
+    const searchButton = await $('.searchbox-submit-button');  // testeaza butonul de cautare
+
+    await searchBox.setValue('laptop');   // cauta tricou polo
+    await searchButton.click();  // da click pe butonul de cautare
+
+    await expect(browser).toHaveTitle('Cauți laptop? Alege din oferta eMAG.ro');
+
+    });    // test the search button and search for something
+
+
+ });
