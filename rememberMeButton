@@ -1,0 +1,8 @@
+describe('emag.ro', () => {
+it('remember me', async () => {
+        const searchBox = await $('#remember_me');  
+        const searchButton = await $('.form-check');  // testing the remember me button
+    
+ }); 
+ 
+});
