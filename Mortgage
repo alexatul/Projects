@@ -1,6 +1,7 @@
 // calculate by math formula : M = P * [r(1+r)^n / ((1+r)^n-1)]
 // P = Principal ; r = Annual Interest Rate ; n= Period
 
+impor java.uti.Scanner;
 
 public class Main {
   public static void main(String[] args) {
@@ -24,5 +25,6 @@ public class Main {
     String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
     
     System.out.println("Mortgage: " + mortgageFormatted);
+    
   }
 }
