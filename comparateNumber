@@ -3,8 +3,8 @@ public class Main{
     int a = 9;
     int b = 7;
     if(a>b)
-     System.out.println("Numarul "+ a + " este mai mare decat " + b + "."); 
+     System.out.println("Numarul "+ a + " este mai mare decat " + b); 
     else 
-     System.out.println("Nu este indeplinita conditia " + a + ">" + b + ".");
+     System.out.println("Nu este indeplinita conditia " + a + ">" + b);
    }
  }
