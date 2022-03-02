@@ -1,0 +1,7 @@
+public class static Main{
+  public static void main(String[] args){
+    cars = ["bmw", "dacia", "mercedes", "ford"];
+    for(i=0;i<4;i++){  
+    System.out.println("Car number " + (i+1) + " este " + cars[i] +);
+  }
+}
