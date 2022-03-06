@@ -1,10 +1,14 @@
+// import the ArrayList class 
+// import the Arrays class
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
     public static void main (String[] args) {
         String[] cars = {"Peugeot", "Suzuki"};   // create array
-        ArrayList<String> carsnew = new ArrayList(Arrays.asList(cars));
+        ArrayList<String> carsnew = new ArrayList(Arrays.asList(cars));  // create a ArrayList object called carsnew
+        
   // add to array new elements
         carsnew.add("Mazda");   
         carsnew.add("Volvo");
@@ -12,4 +16,5 @@ public class Main {
         System.out.println(carsnew);
     }
 }
+
 //  display :  [Peugeot, Suzuki, Mazda, Volvo, Ford]
