@@ -1,7 +1,7 @@
 // calculate by math formula : M = P * [r(1+r)^n / ((1+r)^n-1)]
 // P = Principal ; r = Annual Interest Rate ; n= Period
 
-impor java.uti.Scanner;
+impor java.uti.Scanner;  // import the Scanner class
 
 public class Main {
   public static void main(String[] args) {
