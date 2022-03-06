@@ -1,9 +1,16 @@
-import java.util.Arrays;
+import java.util.Arrays;  // import the Array class
 
-public class static Main{
-  public static void main(String[] args){
-    cars = ["bmw", "dacia", "mercedes", "ford"];
-    for(i=0;i<4;i++){  
-    System.out.println("Car number " + (i+1) + " este " + cars[i] +);
-  }
+public class Main {
+  public static void main(String[] args) {
+
+        String[] cars = {"Mazda", "Dacia", "Mercedes", "Ford"};   // create the array
+        for(int i=0; i<cars.length; i++){
+        System.out.println("The number of " + cars[i] + " is " + (i+1));
+        }
+        }
 }
+
+/* display :  The number of Mazda is 1
+              The number of Dacia is 2
+              The number of Mercedes is 3
+              The number of Ford is 4 */
