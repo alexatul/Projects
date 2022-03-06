@@ -24,10 +24,10 @@ class Frog extends Animal{
 
 class Main {
     public static void main(String[] args) {
-        Animal myAnimal = new Animal();
-        Animal myDog = new Dog();
-        Animal myCat = new Cat();
-        Animal myFrog = new Frog();
+        Animal myAnimal = new Animal();   // create a Animal object
+        Animal myDog = new Dog();   // create a Dog object
+        Animal myCat = new Cat();   // create a Cat object
+        Animal myFrog = new Frog();   // create a Frog object
 
         myAnimal.animalSound();  // Return on display :  The animals makes sounds
         myDog.animalSound();  // Return on display :  The dog say: ham ham
