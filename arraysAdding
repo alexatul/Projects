@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main {
+    public static void main (String[] args) {
+        String[] cars = {"Peugeot", "Suzuki"};   // create array
+        ArrayList<String> carsnew = new ArrayList(Arrays.asList(cars));
+  // add to array new elements
+        carsnew.add("Mazda");   
+        carsnew.add("Volvo");
+        carsnew.add("Ford");
+        System.out.println(carsnew);
+    }
+}
+//  display :  [Peugeot, Suzuki, Mazda, Volvo, Ford]
