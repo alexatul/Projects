@@ -1,0 +1,61 @@
+import java.util.Scanner;
+import java.lang.String;
+
+
+        public class Main {
+            public static void main(String[] args) {
+                int lives = 7;
+
+
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Word: ");
+                String word = scanner.nextLine().toUpperCase();   // input the word
+
+                String wordReplace = word.replaceAll("\\B\\w\\B", "_");  // replaced the letter with " _ " except first and last letter 
+
+                StringBuilder oldWord = new StringBuilder(wordReplace);
+
+                for (int i = 0; i < word.length(); i++) {
+                    if (word.charAt(i) == wordReplace.charAt(0))  {
+                        oldWord.setCharAt(i, wordReplace.charAt(0));   // put the first letter if it found in the word 
+                    }
+                    if(word.charAt(i) == wordReplace.charAt(word.length() - 1)) {
+                        oldWord.setCharAt(i, wordReplace.charAt(word.length() - 1));   //  put the last letter if it found in the word
+                    }
+                }
+
+                System.out.println(oldWord);
+
+                while (oldWord.toString().contains("_") && lives > 0) {
+                    Scanner scannerChar = new Scanner(System.in);
+                    System.out.print("Guess letter: ");
+                    char guessChar = scannerChar.next().charAt(0);
+                    guessChar = Character.toUpperCase(guessChar);      // input the guess letter
+
+                    boolean validGuessedChar = false;
+
+                    for (int i = 0; i < word.length(); i++) {
+                        if (word.charAt(i) == guessChar) {
+                            validGuessedChar = true;
+                            oldWord.setCharAt(i, guessChar);   // replace the " _ " with the guessed letter
+                        }
+                    }
+
+                    if (validGuessedChar) {
+                        System.out.println("You found letter " + guessChar);
+                    } else {
+                        lives--;
+                        System.out.println("you have " + lives + " left");
+                        System.out.println("try again");
+                    }
+
+                    System.out.println(oldWord);
+                }
+
+                if (lives == 0) {
+                    System.out.println("You lost!");
+                } else {
+                    System.out.println("You won!");
+                }
+            }
+        }        
